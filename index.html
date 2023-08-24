@@ -18,6 +18,7 @@
 <body class="body">
   <header  class="header">
     <nav class="header__nav">
+      <img class="header__img"src="/images/logo.svg" alt="logo room">
       <ul class="header__nav__ul">
         <li class="header__nav__ul__li">Home</li>
         <li class="header__nav__ul__li">Shop</li>
@@ -25,66 +26,43 @@
         <li class="header__nav__ul__li">Contact</li>
       </ul>
     </nav> 
+    <button class="previousButton"><svg class="previousButton__svg" width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
+    <button class="nextButton"><svg class="nextButton__svg" width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
   </header>
   <div class="articles">
+    
     <article class="articles__discover">
 
-      <div class="articles__discover__background"></div>
       <h1 class="articles__discover__h1">Discover innovative ways to decorate</h1>
 
       <p class="articles__discover__p">We provide unmatched quality, comfort, and style for property owners across the country. 
       Our experts combine form and function in bringing your vision to life. Create a room in your 
       own style with our collection and make your property a reflection of you and what you love.</p>
 
-      <h2 class="articles__discover__shop"><a class="articles__discover__shop__a">Shop now</a></h2>
-      <svg class="articles__discover__arrow" width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg>
+      <a class="articles__discover__a" href="#">Shop now<svg class="articles__discover__arrow" width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg>
+      </a>
     
     </article>
-  
-  
-    <article class="articles__globe">
-
-      <div class="articles__globe__background"></div>
-      <h1 class="articles__globe__h1">We are available all across the globe</h1>
-
-      <p class="articles__globe__p">With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-      Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-      store locator. Any questions? Don't hesitate to contact us today.</p>
-
-      <h2 class="articles__globe__shop"><a class="articles__globe__shop__a">Shop now</a></h2>
-      <svg class="articles__globe__arrow" width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg>
-      
-    </article>
-
-    <article class="articles__materials">
-
-      <div class="articles__materials__background"></div>
-      <h1 class="articles__materials__h1">Manufactured with the best materials</h1>
-
-      <p class="articles__materials__p">Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
-      to ensure that every product is made as perfect and as consistent as possible. With three decades of 
-      experience in this industry, we understand what customers want for their home and office.</p>
-
-      <h2 class="articles__materials__shop"><a class="articles__materials__shop__a">Shop now</a></h2>
-      <svg class="articles__materials__arrow" width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg>
-
-    </article>
+  </div>
 <footer class="footer">
 
-  <div class="footer__backgroundleft"></div>
-  <h3 class="footer__h3">About our furniture</h3>
+  <img class="footer__backgroundleft" src="/images/image-about-dark.jpg"></img>
+  <section class="footer__section">
+    <h3 class="footer__section__h3">About our furniture</h3>
 
-  <p class="footer__p">Our multifunctional collection blends design and function to suit your individual taste.
-  Make each room unique, or pick a cohesive theme that best express your interests and what
-  inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-  or anything in between. Product specialists are available to help you create your dream space.</p>
+    <p class="footer__section__p">Our multifunctional collection blends design and function to suit your individual taste.
+    Make each room unique, or pick a cohesive theme that best express your interests and what
+    inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+    or anything in between. Product specialists are available to help you create your dream space.</p>
+  </section>
+  <img class="footer__backgroundleft" src="/images/image-about-light.jpg"></img>
 
-  <div class="footer__backgroundright"></div>
 
 </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="scripts/articles.js"></script> 
 </body>
 </html>

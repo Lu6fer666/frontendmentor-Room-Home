@@ -1,4 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: "League Spartan";
+}
+
+.header {
+  background-image: url(/images/desktop-image-hero-1.jpg);
+  height: clamp(10rem, 100vh, 18rem);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.previousButton, .nextButton {
+  padding: 10px 20px;
+  background-color: hsl(0, 0%, 0%);
+  border: none;
+}
+.articles {
+  padding: 3rem 2rem;
+}
+.articles__discover {
+  padding-bottom: 2rem;
+}
+.articles__discover__h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  line-height: 2.2rem;
+}
+.articles__discover__p {
+  color: hsl(0, 0%, 63%);
+  line-height: 1.2rem;
+  padding-bottom: 2rem;
+  font-size: 0.9rem;
+}
+.articles__discover__a {
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+}
+
+.footer__backgroundleft {
+  width: 100%;
+}
+.footer__section {
+  padding: 3rem 2rem;
+}
+.footer__section__h3 {
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  padding-bottom: 1.5rem;
+}
+.footer__section__p {
+  color: hsl(0, 0%, 63%);
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* Temporaire */
+.articles__globe, .articles__materials {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
