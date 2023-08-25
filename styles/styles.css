@@ -15,12 +15,86 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
 }
-.previousButton, .nextButton {
+.header__nav {
+  position: relative;
+  padding: 2rem 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+.header__nav__navbar.shown {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  gap: 2rem;
+  background-color: hsl(0, 0%, 100%);
+  width: 100vh;
+  height: 10rem;
+}
+.header__nav__navbar.shown:after {
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 0;
+  transform: translate(0, 10%);
+  background-color: transparent;
+  border-left: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-top: 40px solid transparent;
+  border-right: 40px solid hsl(0, 0%, 100%);
+}
+.header__nav__navbar__ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.header__img {
+  margin: 2rem auto;
+  height: 1rem;
+  display: block;
+}
+
+.fa-solid {
+  color: hsl(0, 0%, 100%);
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+}
+
+.buttonscroll {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.buttonscroll__previous-button {
   padding: 10px 20px;
   background-color: hsl(0, 0%, 0%);
   border: none;
+  margin-right: -5px;
 }
+.buttonscroll__previous-button:hover {
+  background: #616161;
+  background-image: linear-gradient(to bottom, #616161, #000000);
+  text-decoration: none;
+}
+.buttonscroll__next-button {
+  padding: 10px 20px;
+  background-color: hsl(0, 0%, 0%);
+  border: none;
+  margin-left: -5px;
+}
+.buttonscroll__next-button:hover {
+  background: #616161;
+  background-image: linear-gradient(to bottom, #616161, #000000);
+  text-decoration: none;
+}
+
 .articles {
   padding: 3rem 2rem;
 }

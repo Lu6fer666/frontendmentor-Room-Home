@@ -6,7 +6,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/styles.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Frontend Mentor | Room homepage</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,17 +19,27 @@
 </head>
 <body class="body">
   <header  class="header">
-    <nav class="header__nav">
-      <img class="header__img"src="/images/logo.svg" alt="logo room">
-      <ul class="header__nav__ul">
-        <li class="header__nav__ul__li">Home</li>
-        <li class="header__nav__ul__li">Shop</li>
-        <li class="header__nav__ul__li">About</li>
-        <li class="header__nav__ul__li">Contact</li>
-      </ul>
-    </nav> 
-    <button class="previousButton"><svg class="previousButton__svg" width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
-    <button class="nextButton"><svg class="nextButton__svg" width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
+    
+    <i class="fa-solid fa-bars"></i>
+
+    <div class="header__nav">
+      <nav class="header__nav__navbar">
+        <ul class="header__nav__navbar__ul">
+          <li class="header__nav__navbar__ul__li"><a class="header__nav__ul__li__list">home</a></li>
+          <li class="header__nav__navbar__ul__li"><a class="header__nav__ul__li__list">shop</a></li>
+          <li class="header__nav__navbar__ul__li"><a class="header__nav__ul__li__list">about</a></li>
+          <li class="header__nav__navbar__ul__li"><a class="header__nav__ul__li__list">contact</a></li>
+        </ul>
+      </nav> 
+    </div>
+
+    <img class="header__img"src="/images/logo.svg" alt="logo room">
+
+    <div class="buttonscroll">
+      <button class="buttonscroll__previous-button"><svg class="previousButton__svg" width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
+      <button class="buttonscroll__next-button"><svg class="nextButton__svg" width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
+    </div>
+
   </header>
   <div class="articles">
     
@@ -63,6 +75,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
-  <script src="scripts/articles.js"></script> 
+  <script src="scripts/burgermenu.js"></script> 
 </body>
 </html>

@@ -42,3 +42,6 @@ const h1Element = document.querySelector('.articles__discover__h1');
 
     // INIT
     updateContent(currentIndex);
+
+    const burgerMenu = document.querySelector(".fa-solid.fa-bars");
+const hiddenMenu = document.querySelector(".header__nav__navbar");
