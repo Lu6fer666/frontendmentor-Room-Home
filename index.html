@@ -1,80 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Frontend Mentor | Room homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+<title>Frontend Mentor | Room homepage</title>
+
+<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+<style>
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+</style>
+</head>
+
 <body class="body">
-  <header  class="header">
-    
-    <i class="fa-solid fa-bars"></i>
+
+  <header class="header">
+
 
     <div class="header__nav">
+
       <nav class="header__nav__navbar">
-        <ul class="header__nav__navbar__ul">
-          <li class="header__nav__navbar__ul__li"><a class="header__nav__ul__li__list">home</a></li>
-          <li class="header__nav__navbar__ul__li"><a class="header__nav__ul__li__list">shop</a></li>
-          <li class="header__nav__navbar__ul__li"><a class="header__nav__ul__li__list">about</a></li>
-          <li class="header__nav__navbar__ul__li"><a class="header__nav__ul__li__list">contact</a></li>
+        <img class="header__img" id="imagechange" src="/images/logo.svg" alt="logo room">
+
+        <ul class="menu">
+          <li class="menu__list"><a class="menu__list__menuItem">home</a></li>
+          <li class="menu__list"><a class="menu__list__menuItem">shop</a></li>
+          <li class="menu__list"><a class="menu__list__menuItem">about</a></li>
+          <li class="menu__list"><a class="menu__list__menuItem">contact</a></li>
         </ul>
-      </nav> 
+        <button class="hamburger">
+          <div class="openClose">
+            <i class="menuIcon material-icons">menu</i>
+            <i class="closeIcon material-icons">close</i>
+          </div>
+      </nav>
     </div>
 
-    <img class="header__img"src="/images/logo.svg" alt="logo room">
 
     <div class="buttonscroll">
-      <button class="buttonscroll__previous-button"><svg class="previousButton__svg" width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
-      <button class="buttonscroll__next-button"><svg class="nextButton__svg" width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
+      <button class="buttonscroll__previous-button" id="previousButton"><svg class="previousButton__svg" width="14" height="24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd" />
+        </svg></button>
+      <button class="buttonscroll__next-button" id="nextButton"><svg class="nextButton__svg" width="14" height="24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd" />
+        </svg></button>
     </div>
 
   </header>
   <div class="articles">
-    
+
     <article class="articles__discover">
 
       <h1 class="articles__discover__h1">Discover innovative ways to decorate</h1>
 
-      <p class="articles__discover__p">We provide unmatched quality, comfort, and style for property owners across the country. 
-      Our experts combine form and function in bringing your vision to life. Create a room in your 
-      own style with our collection and make your property a reflection of you and what you love.</p>
+      <p class="articles__discover__p">We provide unmatched quality, comfort, and style for property owners across the
+        country.
+        Our experts combine form and function in bringing your vision to life. Create a room in your
+        own style with our collection and make your property a reflection of you and what you love.</p>
 
-      <a class="articles__discover__a" href="#">Shop now<svg class="articles__discover__arrow" width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg>
+      <a class="articles__discover__a" href="#">Shop now<svg class="articles__discover__arrow" width="40" height="12"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+            fill="#000" fill-rule="nonzero" />
+        </svg>
       </a>
-    
+
     </article>
   </div>
-<footer class="footer">
+  <footer class="footer">
 
-  <img class="footer__backgroundleft" src="/images/image-about-dark.jpg"></img>
-  <section class="footer__section">
-    <h3 class="footer__section__h3">About our furniture</h3>
+    <img class="footer__backgroundleft" src="/images/image-about-dark.jpg"></img>
+    <section class="footer__section">
+      <h3 class="footer__section__h3">About our furniture</h3>
 
-    <p class="footer__section__p">Our multifunctional collection blends design and function to suit your individual taste.
-    Make each room unique, or pick a cohesive theme that best express your interests and what
-    inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-    or anything in between. Product specialists are available to help you create your dream space.</p>
-  </section>
-  <img class="footer__backgroundleft" src="/images/image-about-light.jpg"></img>
+      <p class="footer__section__p">Our multifunctional collection blends design and function to suit your individual
+        taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.</p>
+    </section>
+    <img class="footer__backgroundleft" src="/images/image-about-light.jpg"></img>
 
 
-</div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-  <script src="scripts/burgermenu.js"></script> 
+    </div>
+    <script src="scripts/burgermenu.js"></script>
+    <script src="scripts/articles.js"></script>
 </body>
+
 </html>
