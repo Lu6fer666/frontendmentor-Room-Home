@@ -86,8 +86,11 @@ $PrimaryVerydarkgray: hsl(0, 0%, 27%);
     color: white;
     cursor: pointer;
 }
-
-.closeIcon {
+.menuIcon {
+    fill: $primarywhite;
+}
+.closeIcon  {
+    fill: $primarydarkgray;
     display: none;
 }
 

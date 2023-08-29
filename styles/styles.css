@@ -69,7 +69,12 @@
   cursor: pointer;
 }
 
+.menuIcon {
+  fill: hsl(0, 0%, 100%);
+}
+
 .closeIcon {
+  fill: hsl(0, 0%, 63%);
   display: none;
 }
 
