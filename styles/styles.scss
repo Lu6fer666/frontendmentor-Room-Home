@@ -135,7 +135,6 @@ $PrimaryVerydarkgray: hsl(0, 0%, 27%);
         padding-bottom: 2rem;
 
         &__h1 {
-
             font-size: 2rem;
             font-weight: 600;
             padding-bottom: 1rem;
@@ -161,29 +160,32 @@ $PrimaryVerydarkgray: hsl(0, 0%, 27%);
     }
 }
 
-.footer {
-    &__backgroundleft {
-        width: 100%;
+
+.backgroundleft {
+    width: 100vw;
+}
+
+.section {
+    padding: 3rem 2rem;
+
+    &__h3 {
+        letter-spacing: .4rem;
+        text-transform: uppercase;
+        font-size: .8em;
+        padding-bottom: 1.5rem;
     }
 
-    &__section {
-        padding: 3rem 2rem;
-
-        &__h3 {
-            letter-spacing: .4rem;
-            text-transform: uppercase;
-            font-size: .8em;
-            padding-bottom: 1.5rem;
-        }
-
-        &__p {
-            color: $primarydarkgray;
-            line-height: 1.2rem;
-            font-size: .9rem;
-
-        }
+    &__p {
+        color: $primarydarkgray;
+        line-height: 1.2rem;
+        font-size: .9rem;
     }
 }
+
+.backgroundright {
+    width: 100vw;
+}
+
 
 /* Temporaire */
 
@@ -194,20 +196,79 @@ $PrimaryVerydarkgray: hsl(0, 0%, 27%);
 
 @media (min-width: 1440px) {
 
+
     .body {
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        grid-template-rows: 4rem auto 45px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 16rem auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
         grid-template-areas:
             'header header header header header header header articles articles articles articles articles'
             'header header header header header header header articles articles articles articles articles'
             'header header header header header header header articles articles articles articles articles'
             'header header header header header header header articles articles articles articles articles'
             'header header header header header header header articles articles articles articles articles'
-            'footer__backgroundleft footer__backgroundleft footer__backgroundleft footer__backgroundleft footer__section footer__section footer__section footer__section footer__backgroundright footer__backgroundright footer__backgroundright footer__backgroundright'
-            'footer__backgroundleft footer__backgroundleft footer__backgroundleft footer__backgroundleft footer__section footer__section footer__section footer__section footer__backgroundright footer__backgroundright footer__backgroundright footer__backgroundright'
-            'footer__backgroundleft footer__backgroundleft footer__backgroundleft footer__backgroundleft footer__section footer__section footer__section footer__section footer__backgroundright footer__backgroundright footer__backgroundright footer__backgroundright';
+            'header header header header header header header articles articles articles articles articles'
+            'header header header header header header header articles articles articles articles articles'
+            'header header header header header header header articles articles articles articles articles'
+            'header header header header header header header articles articles articles articles articles'
+            'backgroundleft backgroundleft backgroundleft backgroundleft section section section section backgroundright backgroundright backgroundright backgroundright'
+            'backgroundleft backgroundleft backgroundleft backgroundleft section section section section backgroundright backgroundright backgroundright backgroundright';
+
         gap: 0px;
+        height: 100vh;
+    }
+
+    .header {
+        background-image: url(/images/desktop-image-hero-1.jpg);
+        grid-area: header;
         height: 100%;
+        width: 100%;
+    }
+
+    .articles {
+        padding: 9rem 5rem;
+        display: flex;
+        grid-area: articles;
+
+        &__discover {
+            &__h1 {
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+
+            &__p {
+                font-size: 1.1rem;
+                font-weight: 500;
+                line-height: 1.5rem;
+            }
+        }
+    }
+
+
+    .backgroundleft {
+        width: 100%;
+        grid-area: backgroundleft;
+        
+    }
+
+    .section {
+        display: grid;
+        grid-area: section;
+        height: 100%;
+
+        &__h3 {
+            padding-bottom: 0;
+        }
+
+        &__p {
+            
+        }
+    }
+
+    .backgroundright {
+        width: 100%;
+        grid-area: backgroundright;
     }
 }

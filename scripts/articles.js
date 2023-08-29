@@ -14,19 +14,22 @@ const contentList = [
         country.
         Our experts combine form and function in bringing your vision to life. Create a room in your
         own style with our collection and make your property a reflection of you and what you love.`,
-    backgroundImage: 'url(/images/mobile-image-hero-1.jpg)'
+        mobileBackgroundImage: 'url(/images/mobile-image-hero-1.jpg)',
+        desktopBackgroundImage: 'url(/images/desktop-image-hero-1.jpg)'
   },
   {
     h1: `We are available all across the globe`,
     p: `With stores all over the world, it's easy for you to find furniture for your home or place of business. 
         Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
         store locator. Any questions? Don't hesitate to contact us today.`,
-        backgroundImage: 'url(/images/mobile-image-hero-2.jpg)'
+        mobileBackgroundImage: 'url(/images/mobile-image-hero-2.jpg)',
+    desktopBackgroundImage: 'url(/images/desktop-image-hero-2.jpg)'
   },
   {
     h1: `Manufactured with the best materials`,
     p: `Elevate your living space with our curated selection of furniture and decor. Our pieces blend craftsmanship, comfort, and design to create a space that truly feels like home.`,
-    backgroundImage: 'url(/images/mobile-image-hero-3.jpg)'
+    mobileBackgroundImage: 'url(/images/mobile-image-hero-3.jpg)',
+    desktopBackgroundImage: 'url(/images/desktop-image-hero-3.jpg)'
   }
 ];
 
@@ -37,9 +40,14 @@ let currentIndex = 0;
 function updateContent(index) {
   h1Element.textContent = contentList[index].h1;
   pElement.textContent = contentList[index].p;
-  
-  headerElement.style.backgroundImage = contentList[index].backgroundImage;
 
+
+  
+  const backgroundImage = window.innerWidth >= 1440 ?
+    contentList[index].desktopBackgroundImage :
+    contentList[index].mobileBackgroundImage;
+  
+  headerElement.style.backgroundImage = backgroundImage;
 
 }
 

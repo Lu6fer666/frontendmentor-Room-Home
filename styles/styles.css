@@ -129,22 +129,27 @@
   color: hsl(0, 0%, 0%);
 }
 
-.footer__backgroundleft {
-  width: 100%;
+.backgroundleft {
+  width: 100vw;
 }
-.footer__section {
+
+.section {
   padding: 3rem 2rem;
 }
-.footer__section__h3 {
+.section__h3 {
   letter-spacing: 0.4rem;
   text-transform: uppercase;
   font-size: 0.8em;
   padding-bottom: 1.5rem;
 }
-.footer__section__p {
+.section__p {
   color: hsl(0, 0%, 63%);
   line-height: 1.2rem;
   font-size: 0.9rem;
+}
+
+.backgroundright {
+  width: 100vw;
 }
 
 /* Temporaire */
@@ -156,10 +161,46 @@
 @media (min-width: 1440px) {
   .body {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "footer__backgroundleft footer__backgroundleft footer__backgroundleft footer__backgroundleft footer__section footer__section footer__section footer__section footer__backgroundright footer__backgroundright footer__backgroundright footer__backgroundright" "footer__backgroundleft footer__backgroundleft footer__backgroundleft footer__backgroundleft footer__section footer__section footer__section footer__section footer__backgroundright footer__backgroundright footer__backgroundright footer__backgroundright" "footer__backgroundleft footer__backgroundleft footer__backgroundleft footer__backgroundleft footer__section footer__section footer__section footer__section footer__backgroundright footer__backgroundright footer__backgroundright footer__backgroundright";
+    grid-template-rows: 4rem auto 45px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 16rem auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "backgroundleft backgroundleft backgroundleft backgroundleft section section section section backgroundright backgroundright backgroundright backgroundright" "backgroundleft backgroundleft backgroundleft backgroundleft section section section section backgroundright backgroundright backgroundright backgroundright";
     gap: 0px;
+    height: 100vh;
+  }
+  .header {
+    background-image: url(/images/desktop-image-hero-1.jpg);
+    grid-area: header;
     height: 100%;
+    width: 100%;
+  }
+  .articles {
+    padding: 9rem 5rem;
+    display: flex;
+    grid-area: articles;
+  }
+  .articles__discover__h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .articles__discover__p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+  }
+  .backgroundleft {
+    width: 100%;
+    grid-area: backgroundleft;
+  }
+  .section {
+    display: grid;
+    grid-area: section;
+    height: 100%;
+  }
+  .section__h3 {
+    padding-bottom: 0;
+  }
+  .backgroundright {
+    width: 100%;
+    grid-area: backgroundright;
   }
 }/*# sourceMappingURL=styles.css.map */
