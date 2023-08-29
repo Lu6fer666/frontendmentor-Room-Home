@@ -163,7 +163,7 @@
     display: grid;
     grid-template-rows: 4rem auto 45px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 16rem auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "backgroundleft backgroundleft backgroundleft backgroundleft section section section section backgroundright backgroundright backgroundright backgroundright" "backgroundleft backgroundleft backgroundleft backgroundleft section section section section backgroundright backgroundright backgroundright backgroundright";
+    grid-template-areas: "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "header header header header header header header articles articles articles articles articles" "backgroundleft backgroundleft backgroundleft backgroundleft section section section section backgroundright backgroundright backgroundright backgroundright" "backgroundleft backgroundleft backgroundleft backgroundleft section section section section backgroundright backgroundright backgroundright backgroundright" "backgroundleft backgroundleft backgroundleft backgroundleft section section section section backgroundright backgroundright backgroundright backgroundright";
     gap: 0px;
     height: 100vh;
   }
@@ -172,11 +172,20 @@
     grid-area: header;
     height: 100%;
     width: 100%;
+    position: relative;
+    align-items: flex-start;
+  }
+  .header__img {
+    padding: 3rem 3rem 0 3rem;
+  }
+  .header__nav__navbar {
+    display: inline-block;
   }
   .articles {
-    padding: 9rem 5rem;
-    display: flex;
+    padding: 10rem 5rem;
+    display: grid;
     grid-area: articles;
+    position: relative;
   }
   .articles__discover__h1 {
     font-size: 3rem;
@@ -187,20 +196,55 @@
     font-weight: 500;
     line-height: 1.5rem;
   }
+  .articles__discover__a:hover {
+    color: hsl(0, 0%, 63%);
+    fill: hsl(0, 0%, 63%);
+  }
   .backgroundleft {
     width: 100%;
     grid-area: backgroundleft;
-  }
-  .section {
-    display: grid;
-    grid-area: section;
     height: 100%;
   }
+  .section {
+    grid-area: section;
+    height: 100%;
+    padding: 4rem 2rem;
+  }
   .section__h3 {
-    padding-bottom: 0;
+    font-size: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+  .section__p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
   }
   .backgroundright {
-    width: 100%;
     grid-area: backgroundright;
+    width: 100%;
+    height: 100%;
+  }
+  .buttonscroll {
+    position: absolute;
+    left: 0;
+    width: 20%;
+  }
+  .buttonscroll__previous-button {
+    width: 50%;
+  }
+  .buttonscroll__next-button {
+    width: 50%;
+  }
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    color: hsl(0, 0%, 100%);
+    display: contents;
+  }
+  .menu__list {
+    margin-right: 2.5rem;
+  }
+  .menu__list__menuItem {
+    color: hsl(0, 0%, 100%);
   }
 }/*# sourceMappingURL=styles.css.map */

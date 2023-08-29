@@ -14,15 +14,15 @@ const contentList = [
         country.
         Our experts combine form and function in bringing your vision to life. Create a room in your
         own style with our collection and make your property a reflection of you and what you love.`,
-        mobileBackgroundImage: 'url(/images/mobile-image-hero-1.jpg)',
-        desktopBackgroundImage: 'url(/images/desktop-image-hero-1.jpg)'
+    mobileBackgroundImage: 'url(/images/mobile-image-hero-1.jpg)',
+    desktopBackgroundImage: 'url(/images/desktop-image-hero-1.jpg)'
   },
   {
     h1: `We are available all across the globe`,
     p: `With stores all over the world, it's easy for you to find furniture for your home or place of business. 
         Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
         store locator. Any questions? Don't hesitate to contact us today.`,
-        mobileBackgroundImage: 'url(/images/mobile-image-hero-2.jpg)',
+    mobileBackgroundImage: 'url(/images/mobile-image-hero-2.jpg)',
     desktopBackgroundImage: 'url(/images/desktop-image-hero-2.jpg)'
   },
   {
@@ -42,11 +42,11 @@ function updateContent(index) {
   pElement.textContent = contentList[index].p;
 
 
-  
-  const backgroundImage = window.innerWidth >= 1440 ?
+
+  const backgroundImage = window.innerWidth >= 768 ?
     contentList[index].desktopBackgroundImage :
     contentList[index].mobileBackgroundImage;
-  
+
   headerElement.style.backgroundImage = backgroundImage;
 
 }
@@ -57,7 +57,7 @@ previousButton.addEventListener('click', () => {
   updateContent(currentIndex);
 });
 
-// BUTTON NEXT
+// NEXT BUTTON
 nextButton.addEventListener('click', () => {
   currentIndex = (currentIndex + 1) % contentList.length;
   updateContent(currentIndex);
@@ -65,3 +65,9 @@ nextButton.addEventListener('click', () => {
 
 // INIT
 updateContent(currentIndex);
+
+
+// UPDATE When resize
+window.addEventListener('resize', () => {
+  updateContent(currentIndex);
+});
