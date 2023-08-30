@@ -1,4 +1,3 @@
-
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger= document.querySelector(".hamburger");
@@ -16,9 +15,11 @@ function toggleMenu() {
     closeIcon.style.color = "gray";
     menuIcon.style.display = "none";
   }
-}
+};
 
 hamburger.addEventListener("click", toggleMenu);
+
+
 
 menuItems.forEach( 
   function(menuItem) { 
